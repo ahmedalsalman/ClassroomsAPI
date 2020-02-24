@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'classes',
+    'APIapp',
 
     'crispy_forms',
 ]
@@ -56,6 +57,15 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'classrooms.urls'
+
+REST_FRAMEWORK = {
+    
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+    
+}
 
 TEMPLATES = [
     {
